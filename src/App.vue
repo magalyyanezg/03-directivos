@@ -4,6 +4,9 @@
     <hr />
     <h2> APW</h2>
     <h3>Grupo 4A</h3>
+    <h1>Directivas en VUE.js</h1>
+    <hr />
+    <h2>v-text</h2>
     <span v-text="'Hola desde la directiva v-text'"> </span>
     <br>
     <span>Hola desde la directiva v-text</span>
