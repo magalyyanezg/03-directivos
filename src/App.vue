@@ -24,6 +24,7 @@
       <li>{{usuarios[2] }}</li>
       <li>{{usuarios[3] }}</li>
     </ul>
+
     <br>
     <ul>
       <li v-for="(usuario, index) in usuarios"> {{index}}: {{usuario}} </li>
@@ -34,19 +35,20 @@
     </ul>
     <br>
     <ul>
-      <li v-for="(valor, clave) in uusuarios" :key="clave">{{  clave }}: {{ valor }}</li>
+      <li v-for="(valor, clave) in uusuarios" :key="clave"> {{clave}}: {{valor}}</li>
     </ul>
 
+  
     <hr />
     <h1>v-bind</h1>
-    <img v-bin:src="url" alt="No hay internet">
-  </div>
+    <img src="url" alt="No hay internet">
 
     <hr />
     <h1>v-on</h1>
     <div @dblclick="click" class="contador">Clicks: {{clicks}}</div>
+  
 
-
+  </div>
 
 </template>
 
@@ -62,13 +64,13 @@
       url:"https://cdn.svgporn.com/logos/descript-icon.svg",
     }),
     methods: {
-      inc() {
+      inc () {
         this.edad++;
       },
       dis () {
         this.edad--;
       },
-      click() {
+      click () {
         this.clicks++;
       },
     },
