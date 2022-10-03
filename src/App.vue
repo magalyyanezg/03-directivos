@@ -26,15 +26,15 @@
     </ul>
     <br>
     <ul>
-      <li v-for="usuario in usuarios"> {{ usuario }}</li>
+      <li v-for="(usuario, index) in usuarios"> {{index}}: {{usuario}} </li>
     </ul>
     <br>
     <ul>
-      <li v-for="(usuario, index) in usuarios"> {{  index }}: {{ usuario }}</li>
+      <li v-for="(usuario, index) in usuarios" :key="index"> {{index}}:  {{usuario}} </li>
     </ul>
     <br>
     <ul>
-      <li v-for="(valor, clave) in uusuarios" :key="clave"> {{  clave }}: {{ valor }}</li>
+      <li v-for="(valor, clave) in uusuarios" :key="clave">{{  clave }}: {{ valor }}</li>
     </ul>
 
     <hr />
@@ -44,9 +44,7 @@
 
     <hr />
     <h1>v-on</h1>
-    <div @dblclick="click" class="contador">
-      Clicks: {{clicks}}
-    </div>
+    <div @dblclick="click" class="contador">Clicks: {{clicks}}</div>
 
 
 
@@ -60,7 +58,7 @@
       edad: 0,
       usuarios: ["Melisa", "Fernando", "Raul", "Jose"],
       uusuarios: {nombre: "Yirsis"},
-      clicks:0,
+      clicks: 0,
       url:"https://cdn.svgporn.com/logos/descript-icon.svg",
     }),
     methods: {
